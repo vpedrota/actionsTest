@@ -1,5 +1,4 @@
-# .github/workflows/deploy.yml
-name: Deploy 🚀 Clima to Google Cloud Run (☁🏃)
+name: Deploy
 on:
   push:
     branches:
