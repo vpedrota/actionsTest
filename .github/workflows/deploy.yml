@@ -25,13 +25,13 @@ jobs:
       - name: Building (🏗)
         run: |-
           gcloud builds submit \
-            --tag gcr.io/testproject-354013/test
+            --tag gcr.io/testproject-354013/test --project=testproject-354013
 
       # Setup gcloud CLI
       - name: Deploy (🚀)
         uses: google-github-actions/deploy-cloudrun@main
         with:
-          service: test-00001-jow
+          service: test
           image: gcr.io/testproject-354013/test
           region: us-central1
           credentials: ${{ secrets.GCP_CREDENTIALS }}
