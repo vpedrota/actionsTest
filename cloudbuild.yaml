@@ -1,8 +1,6 @@
 steps:
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/mydepl', 'my-image=gcr.io/my-project/myimage']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-east4-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/my-project-id/myimage', '.']
+  args: ['build', '-t', 'gcr.io/testproject-354013/github.com/vpedrota/actionstest:$SHORT_SHA', '.']
+  
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/testproject-354013/github.com/vpedrota/actionstest:$SHORT_SHA', '.']
