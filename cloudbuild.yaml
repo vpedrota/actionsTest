@@ -3,4 +3,4 @@ steps:
   args: ['build', '-t', 'gcr.io/testproject-354013/github.com/vpedrota/actionstest:$SHORT_SHA', '.']
   
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/testproject-354013/github.com/vpedrota/actionstest:$SHORT_SHA', '.']
+  args: ['push', 'gcr.io/testproject-354013/github.com/vpedrota/actionstest:$SHORT_SHA']
