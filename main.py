@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     name = request.args.get('name', 'World')
-    return f'Helllkkooo {name}!'
+    return f'H {name}!'
 
 
 if __name__ == "__main__":
